@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nyas Todos</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Nyas-backed task tracking</p>
+        <h1>Todos that persist in PostgreSQL.</h1>
+        <p class="lede">
+          Add tasks, mark them complete, and filter what matters without leaving
+          this single page.
+        </p>
+      </section>
+
+      <section class="panel">
+        <form id="todo-form" class="todo-form">
+          <label class="sr-only" for="title">New todo</label>
+          <input
+            id="title"
+            name="title"
+            type="text"
+            maxlength="200"
+            placeholder="What needs attention?"
+            required
+          />
+          <button type="submit">Add Todo</button>
+        </form>
+
+        <div class="toolbar">
+          <div class="filters" role="tablist" aria-label="Todo filters">
+            <button type="button" class="filter is-active" data-filter="all">All</button>
+            <button type="button" class="filter" data-filter="active">Active</button>
+            <button type="button" class="filter" data-filter="completed">Completed</button>
+          </div>
+          <p id="summary" class="summary">Loading todos...</p>
+        </div>
+
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+        <ul id="todo-list" class="todo-list"></ul>
+      </section>
+    </main>
+
+    <template id="todo-item-template">
+      <li class="todo-item">
+        <label class="todo-toggle">
+          <input class="toggle-input" type="checkbox" />
+          <span class="toggle-mark" aria-hidden="true"></span>
+        </label>
+
+        <div class="todo-copy">
+          <p class="todo-title"></p>
+          <p class="todo-meta"></p>
+        </div>
+
+        <button type="button" class="delete-button">Delete</button>
+      </li>
+    </template>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

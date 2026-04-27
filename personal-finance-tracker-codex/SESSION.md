@@ -1,0 +1,1 @@
+- Nyas integration needs a Postgres URI supplied out-of-band because the public project API requires bearer authentication and no Nyas credentials are present in the repo.

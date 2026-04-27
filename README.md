@@ -27,6 +27,7 @@ Your connection string is ready immediately — no account setup, no config file
 | [`crm-go-codex/`](./crm-go-codex/) | CRM | Go, server-rendered HTML | Codex |
 | [`crm-ts-antigravity/`](./crm-ts-antigravity/) | CRM | TypeScript, Next.js, Prisma | Antigravity |
 | [`event_analytics-claude/`](./event_analytics-claude/) | Event analytics | Node.js, Fastify, React | Claude |
+| [`personal-finance-tracker-codex/`](./personal-finance-tracker-codex/) | Personal finance tracker | Python | Codex |
 
 ### Todo Apps
 
@@ -39,6 +40,10 @@ Customer Relationship Management apps with a customer directory and a Kanban dea
 ### Event Analytics (`event_analytics-claude`)
 
 High-throughput event tracking system. A lightweight `tracker.js` snippet batches browser events and ships them to a Fastify backend, which buffers writes in-memory and bulk-inserts them into Postgres every 2 seconds. A React dashboard shows live sessions, time-series charts, funnel analysis, and referrer breakdowns.
+
+### Personal Finance Tracker (`personal-finance-tracker-codex`)
+
+Dependency-light Python web app for logging income and expenses, categorizing spending, and reviewing monthly summaries. Runs against Nyas/Postgres when `NYAS_DATABASE_URL` or `DATABASE_URL` is set, and falls back to a local SQLite database otherwise.
 
 ## Getting started
 
